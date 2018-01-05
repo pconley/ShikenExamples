@@ -34,7 +34,7 @@ describe "Agile Travel - Select Flight Page" do
 	before :each do
 		TravelSession.start()
 		$TravelFlightPage.goto
-    	expect($TravelFlightPage).to be_present
+		expect($TravelFlightPage).to be_present
 	end
   
   	after :each do
@@ -66,7 +66,6 @@ end
 ### API Entry Points ###
 
 ```
-#!ruby
 SK::init
 SK::quit
 SK::Trace
@@ -76,10 +75,8 @@ SK::Dropdown
 ```
 *** rspec spec helper ***
 
-Usually you want to use one browser session for an entire test suite execution, so you will put the init and quit into the spec_helper
+Sometimes you want to use one browser session for an entire test suite execution, so you will put the init and quit into the spec_helper so it runs once before all the tests
 ```
-#!ruby
-
 RSpec.configure do |config|
      
   config.before :suite do
@@ -93,17 +90,12 @@ RSpec.configure do |config|
 end
 ```
 ### SK::Trace ###
-
-You can turn on/off the WT internal tracing by by setting the trace level using either a symbol or a number.  Normally, it is a good idea to leave the default set to :warn
+You can turn on/off the shiken internal tracing by by setting the trace level using either a symbol or a number.  Normally, it is a good idea to leave the default which set to :warn.  You can use numbers or symbols.
 ```
 #!ruby
 
-SK::Trace.level = :debug # 3
-SK::Trace.level = :warn  # 2 is the default
-SK::Trace.level = :error # 1 
-SK::Trace.level = :quiet # 0
-SK::Trace.level = 3 # all tracing
-SK::Trace.level = 2 # warnings and errors
-SK::Trace.level = 1 # just errors
-SK::Trace.level = 0 # no output
+SK::Trace.level = :debug # = 3    # all tracing
+SK::Trace.level = :warn  # = 2    # warnings and errors (default)
+SK::Trace.level = :error # = 1    # just errors
+SK::Trace.level = :quiet # = 0    # no putput
 ```
