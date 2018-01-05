@@ -1,19 +1,27 @@
 # Shiken - Travel #
 
-This is an example  project to exercise all of the shiken gem api endpoints.  We use a sample website that exists at travel.agileway.net (for this purpose, I think).  The tests themselves are written in ruby/rspec.  So install
+This is an example that uses a fake website that exists for this kind of testing... it is located at 
+[Agile Trave]: travel.agileway.net "fake wesite for testing"
+The tests themselves are written in ruby/rspec.  
 
->> clone???
+## Install 
 
-gem install shiken NEED SOURCE LINK
+CLONE 
+
+gem install selenium-webdriver
+gem install colorize
+gem install shiken 
 
 rspec spec
 
-### Who do I talk to? ###
+### Author ###
 
 * Pat Conley (pconley312@gmail.com)
 
 ### API Entry Points ###
-
+Full documentation is at 
+[Shiken Documentation] : http://www.rubydoc.info/gems/shiken/0.0.4 "detail api documentation"
+but here is a few things to grab your attention
 ```
 #!ruby
 
