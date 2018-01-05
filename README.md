@@ -1,12 +1,14 @@
-# Shiken [試験] #
+# Shiken Examples #
 
-Shiken is a ruby gem that is a wrapper for selenium.  In my experience many people write "scripts" using selenium, not "tests".  The difference being you can start a set of tests and walk away... then come back and find out what passed or failed.  Scripts are something you have to watch to see what is going on.  Automation is key.
+Shiken is a ruby gem that is a wrapper for selenium that you vcan find at 
+[Shinken]: https://github.com/pconley/Shiken "the source code for the gem"
 
-There are other similar frameworks... this is just my own way of digging into automation test and techniques (and ruby code for that matter).
+## The examples ##
 
-Shiken is the Japanese word for test.
+* Travel
+* (More to come)
 
-### Project Design Philosopy ###
+### Testing Philosopy ###
 
 * the test pyramid
 * rely on unit tests
@@ -17,14 +19,11 @@ Shiken is the Japanese word for test.
 * test clean up after themselves
 * you can run test individually
 
-## Travel Site Examples
-
-
 ### Who do I talk to? ###
 
 * Pat Conley pconley312@gmail.com
 
-### A simple rspec example ###
+### A Quick Look ###
 So, what would a test look like using shiken?  This is an example from the travel project that uses the session and page objects to extract the test(s) from the (resuable) login/out steps and specific page elements.  This example has 4 independent tests... each wrapped in the start and stop of a session.
 
 ```
@@ -64,20 +63,6 @@ describe "Agile Travel - Select Flight Page" do
 end
 
 ```
-# Shiken - Travel #
-
-This is an example  project to exercise all of the shiken gem api endpoints.  We use a sample website that exists at travel.agileway.net (for this purpose, I think).  The tests themselves are written in ruby/rspec.  So install
-
->> clone???
-```
-gem install shiken NEED SOURCE LINK
-rspec spec
-```
-
-### Who do I talk to? ###
-
-* Pat Conley (pconley312@gmail.com)
-
 ### API Entry Points ###
 
 ```
